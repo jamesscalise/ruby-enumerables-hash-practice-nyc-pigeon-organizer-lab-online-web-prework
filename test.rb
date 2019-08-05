@@ -35,6 +35,7 @@ def nyc_pigeon_organizer(data)
     }
   }
   }
+  return newHash
 end
 
 newData = nyc_pigeon_organizer(pigeon_data)
