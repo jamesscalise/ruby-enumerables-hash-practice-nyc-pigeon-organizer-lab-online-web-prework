@@ -8,7 +8,7 @@ def nyc_pigeon_organizer(data)
         else
           newHash[name] = {}
           newHash[name][key] = []
-          newHash[name][key] << key2
+          newHash[name][key] << key2.to_s
         end
     }
   }
