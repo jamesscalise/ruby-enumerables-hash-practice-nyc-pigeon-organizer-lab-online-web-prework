@@ -18,5 +18,9 @@ pigeon_data = {
 }
 
 pigeon_data.each {|key, value|
-puts key
+  key.each do {|key2, value2|
+    puts key2
+    puts value2
+  }
+  
 }
