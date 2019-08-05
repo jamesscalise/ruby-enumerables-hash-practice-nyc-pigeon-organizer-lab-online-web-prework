@@ -17,15 +17,25 @@ pigeon_data = {
   }
 }
 
-pigeon_data.each {|key, value|
-  puts "key is #{key}"
-  puts "vlaue is #{value}"
-  value.each  {|key2, value2|
-    puts "key 2 is #{key2}"
-    puts "value 2 is #{value2}"
-    value2.each{|item|
-    puts item
+def nyc_pigeon_organizer(data)
+  newHash = {}
+  data.each {|key, value|
+    value.each{|key2, value2|
+      value2.each{|name|
+        if newHash[name] and newHash[name][key]
+           newHash[name][key] << key2.to_s
+        elsif newHash[name]  
+            newHash[name][key] = []
+            newHash[name][key] << key2.to_s
+        else
+          newHash[name] = {}
+          newHash[name][key] = []
+          newHash[name][key] << key2.to_s
+        end
     }
   }
-  
-}
+  }
+end
+
+newData = nyc_pigeon_organizer(pigeon_data)
+print newData
