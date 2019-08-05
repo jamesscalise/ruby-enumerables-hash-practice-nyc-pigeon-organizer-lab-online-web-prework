@@ -19,7 +19,7 @@ pigeon_data = {
 
 pigeon_data.each {|key, value|
   puts "key is #{key}"
-  pts "vlaue is #{value}"
+  puts "vlaue is #{value}"
   value.each  {|key2, value2|
     puts "key 2 is #{key2}"
     puts "value 2 is #{value2}"
