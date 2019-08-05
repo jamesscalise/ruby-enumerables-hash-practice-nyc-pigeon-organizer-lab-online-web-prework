@@ -6,6 +6,9 @@ def nyc_pigeon_organizer(data)
         if newHash[name]
           newHash[name][key] << key2
         else
+          newHash[name] = {}
+          newHash[name][key] = []
+          newHash[name][key] << key2
         end
     }
   }
