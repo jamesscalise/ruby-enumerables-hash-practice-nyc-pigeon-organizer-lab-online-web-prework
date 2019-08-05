@@ -23,6 +23,8 @@ pigeon_data.each {|key, value|
   value.each  {|key2, value2|
     puts "key 2 is #{key2}"
     puts "value 2 is #{value2}"
+    value2.each{|item|}
+    puts item
   }
   
 }
